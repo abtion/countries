@@ -6,6 +6,9 @@ jobs:
   rubocop:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up RVM
+        run: |
+          curl -sSL https://get.rvm.io | bash
       - name: checkout repository
         uses: actions/checkout@v2
       - name: set up Ruby
